@@ -1,0 +1,179 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0f1a;--surface:#111827;--card:#16213e;--accent:#00d4aa;--accent2:#7c3aed;--text:#e2e8f0;--muted:#94a3b8;--border:rgba(255,255,255,0.08)}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.7}
+.container{max-width:860px;margin:0 auto;padding:0 2rem 4rem}
+header{padding:3.5rem 0 2.5rem;display:flex;gap:2.5rem;align-items:center;border-bottom:0.5px solid var(--border)}
+.avatar{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--accent2),var(--accent));display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:2rem;color:#fff;flex-shrink:0}
+.header-info h1{font-family:'DM Serif Display',serif;font-size:2.4rem;font-weight:400;line-height:1.1;color:#fff}
+.header-info .role{color:var(--accent);font-size:0.85rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;margin:6px 0 10px}
+.header-info p{color:var(--muted);font-size:0.9rem;max-width:480px;line-height:1.6}
+.links{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.links a{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border:0.5px solid var(--border);border-radius:20px;color:var(--muted);font-size:0.78rem;text-decoration:none;transition:all 0.2s}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+nav{display:flex;gap:0;margin:2rem 0;border-bottom:0.5px solid var(--border)}
+.nav-btn{background:none;border:none;padding:10px 18px;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:500;cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;border-bottom:2px solid transparent;transition:all 0.2s;margin-bottom:-0.5px}
+.nav-btn.active{color:var(--accent);border-bottom-color:var(--accent)}
+.section{display:none;animation:fadeIn 0.3s ease}
+.section.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.section-title{font-family:'DM Serif Display',serif;font-size:1.5rem;font-weight:400;color:#fff;margin:2rem 0 1.2rem}
+.card{background:var(--card);border:0.5px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1rem;transition:border-color 0.2s}
+.card:hover{border-color:rgba(0,212,170,0.3)}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
+.card-title{font-weight:500;color:#fff;font-size:0.95rem}
+.card-meta{font-size:0.78rem;color:var(--accent);font-weight:500;background:rgba(0,212,170,0.08);padding:2px 8px;border-radius:4px;white-space:nowrap}
+.card-sub{font-size:0.82rem;color:var(--muted);margin-bottom:6px}
+.card-body{font-size:0.88rem;color:var(--muted);line-height:1.6}
+.edu-item{display:flex;gap:1rem;margin-bottom:1rem;padding:1.1rem 1.3rem;background:var(--card);border:0.5px solid var(--border);border-radius:12px}
+.edu-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:6px;flex-shrink:0}
+.edu-degree{font-weight:500;color:#fff;font-size:0.9rem}
+.edu-school{font-size:0.82rem;color:var(--muted);margin:2px 0}
+.edu-score{font-size:0.78rem;color:var(--accent);font-weight:500}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:1.5rem}
+.skill-tag{background:var(--card);border:0.5px solid var(--border);border-radius:8px;padding:10px 12px;font-size:0.82rem;color:var(--text);text-align:center;transition:all 0.2s}
+.skill-tag:hover{border-color:var(--accent);color:var(--accent)}
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cert-item{background:var(--card);border:0.5px solid var(--border);border-radius:10px;padding:0.9rem 1rem}
+.cert-provider{font-size:0.72rem;color:var(--accent);font-weight:500;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px}
+.cert-name{font-size:0.83rem;color:var(--text);line-height:1.4}
+.contact-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.contact-card{flex:1;min-width:180px;background:var(--card);border:0.5px solid var(--border);border-radius:12px;padding:1rem 1.2rem}
+.contact-label{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px}
+.contact-val{font-size:0.88rem;color:#fff;word-break:break-all}
+.highlight{color:var(--accent)}
+</style>
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Portfolio of Bhagya Sree M, Cyber Security Engineering Student</h2>
+<div class="container">
+<header>
+  <div class="avatar">BS</div>
+  <div class="header-info">
+    <h1>Bhagya Sree M</h1>
+    <div class="role">Cyber Security Engineer &amp; Developer</div>
+    <p>B.E. student specializing in cybersecurity, with hands-on internship experience in network security, blockchain, and app development. CGPA: <span class="highlight">8.95/10</span></p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/bhagya-sree-m-2b8011318" target="_blank">&#128101; LinkedIn</a>
+      <a href="https://github.com/bhagi7777mae" target="_blank">&#128279; GitHub</a>
+      <a href="mailto:mbhagya59@jnn.edu.in">&#9993; Email</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <button class="nav-btn active" onclick="show('about',this)">About</button>
+  <button class="nav-btn" onclick="show('experience',this)">Experience</button>
+  <button class="nav-btn" onclick="show('skills',this)">Skills</button>
+  <button class="nav-btn" onclick="show('certs',this)">Certifications</button>
+  <button class="nav-btn" onclick="show('contact',this)">Contact</button>
+</nav>
+
+<div id="about" class="section active">
+  <div class="section-title">Education</div>
+  <div class="edu-item">
+    <div class="edu-dot"></div>
+    <div>
+      <div class="edu-degree">B.E. in Computer Science (Cyber Security)</div>
+      <div class="edu-school">J.N.N Institute of Engineering, Redhills &nbsp;·&nbsp; 2023 – Present</div>
+      <div class="edu-score">CGPA: 8.95 / 10</div>
+    </div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-dot" style="background:var(--accent2)"></div>
+    <div>
+      <div class="edu-degree">HSC – Class XII</div>
+      <div class="edu-school">J.N.N Matric Hr. Secondary School, Kannigaipair &nbsp;·&nbsp; 2022–2023</div>
+      <div class="edu-score">65%</div>
+    </div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-dot" style="background:#94a3b8"></div>
+    <div>
+      <div class="edu-degree">SSLC – Class X</div>
+      <div class="edu-school">J.N.N Matric Hr. Secondary School, Kannigaipair</div>
+      <div class="edu-score">64%</div>
+    </div>
+  </div>
+</div>
+
+<div id="experience" class="section">
+  <div class="section-title">Internships</div>
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Cyber Security &amp; Blockchain Technology</div>
+      <div class="card-meta">Jul – Aug 2025</div>
+    </div>
+    <div class="card-sub">Code Alpha &nbsp;·&nbsp; Virtual</div>
+    <div class="card-body">Built a network sniffing tool to detect and monitor network traffic. Designed and implemented a blockchain-based smart storage system on-device.</div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">App Development &amp; Cyber Security</div>
+      <div class="card-meta">May – Jun 2024</div>
+    </div>
+    <div class="card-sub">Slash Mark</div>
+    <div class="card-body">Developed a two-factor face security application. Implemented keylogger and encryption modules for security research purposes.</div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">App Development</div>
+      <div class="card-meta">Dec 2024</div>
+    </div>
+    <div class="card-sub">NSIC Government Sector</div>
+    <div class="card-body">Created Android applications including a clock app, casual games, and a photo editing tool for smartphone devices.</div>
+  </div>
+</div>
+
+<div id="skills" class="section">
+  <div class="section-title">Technical Skills</div>
+  <div class="skills-grid">
+    <div class="skill-tag">Python</div>
+    <div class="skill-tag">C++</div>
+    <div class="skill-tag">HTML / CSS</div>
+    <div class="skill-tag">JSON</div>
+    <div class="skill-tag">Front-End Dev</div>
+    <div class="skill-tag">UI/UX Design</div>
+    <div class="skill-tag">Web Design Tools</div>
+    <div class="skill-tag">Cloud Practitioner</div>
+    <div class="skill-tag">Network Security</div>
+    <div class="skill-tag">Blockchain</div>
+    <div class="skill-tag">Problem Solving</div>
+    <div class="skill-tag">App Development</div>
+  </div>
+</div>
+
+<div id="certs" class="section">
+  <div class="section-title">Certifications</div>
+  <div class="cert-grid">
+    <div class="cert-item"><div class="cert-provider">AWS</div><div class="cert-name">Cloud Practitioner</div></div>
+    <div class="cert-item"><div class="cert-provider">Cisco Academy</div><div class="cert-name">Intro to Cyber Security, Networking Basics, Ethical Hacking</div></div>
+    <div class="cert-item"><div class="cert-provider">Cisco Academy</div><div class="cert-name">Networking Essentials, Python, Java Programming</div></div>
+    <div class="cert-item"><div class="cert-provider">Great Learning</div><div class="cert-name">Power BI &amp; Pillars of Cyber Security Threats</div></div>
+    <div class="cert-item"><div class="cert-provider">HP Life</div><div class="cert-name">Data Science, AI for Beginners, Cyber Security Awareness</div></div>
+    <div class="cert-item"><div class="cert-provider">NPTEL</div><div class="cert-name">Ethical Hacking, Privacy &amp; Security on Social Media</div></div>
+    <div class="cert-item"><div class="cert-provider">IBM</div><div class="cert-name">Generative AI</div></div>
+    <div class="cert-item"><div class="cert-provider">Simple Learning</div><div class="cert-name">Intro to Cloud Security &amp; Scale on Cloud Security</div></div>
+    <div class="cert-item"><div class="cert-provider">Prepinsta</div><div class="cert-name">Java Programming</div></div>
+  </div>
+</div>
+
+<div id="contact" class="section">
+  <div class="section-title">Get in Touch</div>
+  <div class="contact-row">
+    <div class="contact-card"><div class="contact-label">Phone</div><div class="contact-val">+91 78457 66492</div></div>
+    <div class="contact-card"><div class="contact-label">Email</div><div class="contact-val">mbhagya59@jnn.edu.in</div></div>
+    <div class="contact-card"><div class="contact-label">LinkedIn</div><div class="contact-val" style="color:var(--accent)">bhagya-sree-m-2b8011318</div></div>
+    <div class="contact-card"><div class="contact-label">GitHub</div><div class="contact-val" style="color:var(--accent)">github.com/bhagi7777mae</div></div>
+  </div>
+</div>
+</div>
+
+<script>
+function show(id,btn){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
